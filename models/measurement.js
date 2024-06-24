@@ -1,10 +1,8 @@
 const mongoose = require('mongoose')
 
-const userSchema = new mongoose.Schema({
+const readingSchema = new mongoose.Schema({any: {}})
 
-})
-
-userSchema.set('toJSON',{
+readingSchema.set('toJSON',{
   transform:(document , returnedObject) => {
     returnedObject.id = returnedObject._id.toString()
     delete returnedObject._id
@@ -13,4 +11,4 @@ userSchema.set('toJSON',{
   }
 })
 
-module.exports = mongoose.model('User',userSchema)
+module.exports = mongoose.model('Reading',readingSchema)
