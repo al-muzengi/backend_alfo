@@ -1,6 +1,10 @@
 const mongoose = require('mongoose')
 
-const readingSchema = new mongoose.Schema({any: {}})
+const readingSchema = new mongoose.Schema({
+  current:Number,
+  voltage:Number,
+  power:Number
+})
 
 readingSchema.set('toJSON',{
   transform:(document , returnedObject) => {
